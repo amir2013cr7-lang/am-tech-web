@@ -102,24 +102,37 @@
 <body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary-fixed">
 <!-- Shared TopAppBar -->
 <header class="fixed top-0 w-full z-50 bg-[#0a0f14]/80 backdrop-blur-xl shadow-[0_0_12px_rgba(109,221,255,0.1)]">
-  <div class="flex flex-col items-center px-6 py-4 max-w-screen-2xl mx-auto">
-
-    <!-- Logo -->
-    <h1 class="text-2xl font-black text-white tracking-tighter font-headline mb-3">
-      AM Tech
-    </h1>
-
-    <!-- Mobile ONLY Navbar -->
-    <nav class="flex md:hidden gap-6 text-sm font-headline font-bold tracking-tight">
-      <a class="text-[#6dddff]" href="#">Home</a>
-      <a class="text-gray-400 hover:text-[#6dddff]" href="#work">Work</a>
-      <a class="text-gray-400 hover:text-[#6dddff]" href="#about">About</a>
-      <a class="text-gray-400 hover:text-[#6dddff]" href="#contact">Connect</a>
+  <div class="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto">
+    <!-- Mobile Burger + Logo -->
+    <div class="flex items-center gap-4 md:hidden">
+      <button id="burger-toggle" class="p-2 rounded text-gray-400 hover:text-[#6dddff] hover:bg-surface-container transition-all">
+        <span class="material-symbols-outlined text-xl">menu</span>
+      </button>
+      <h1 class="text-xl font-black text-white tracking-tighter font-headline">AM Tech</h1>
+    </div>
+    <!-- Desktop Logo -->
+    <h1 class="text-2xl font-black text-white tracking-tighter font-headline md:flex hidden flex-shrink-0">AM Tech</h1>
+    <!-- Desktop Navbar -->
+    <nav class="hidden md:flex items-center gap-8 font-headline font-bold tracking-tight">
+      <a class="text-[#6dddff] pb-1 border-b-2 border-[#6dddff] hover:text-[#6dddff] transition-all" href="#">Home</a>
+      <a class="text-gray-400 hover:text-[#6dddff] transition-all" href="#work">Work</a>
+      <a class="text-gray-400 hover:text-[#6dddff] transition-all" href="#about">About</a>
+      <a class="text-gray-400 hover:text-[#6dddff] transition-all" href="#contact">Connect</a>
     </nav>
-
   </div>
 </header>
-<main class="pt-20">
+
+<!-- Mobile Dropdown Menu -->
+<nav id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-[#0a0f14]/95 backdrop-blur-xl z-40 shadow-[0_10px_30px_rgba(0,0,0,0.5)] opacity-0 invisible scale-95 transition-all duration-200 origin-top">
+  <div class="px-6 py-6 flex flex-col gap-2">
+    <a class="text-[#6dddff] py-3 px-2 rounded-lg hover:bg-surface-container" href="#">Home</a>
+    <a class="text-gray-400 hover:text-[#6dddff] py-3 px-2 rounded-lg hover:bg-surface-container transition-colors" href="#work">Work</a>
+    <a class="text-gray-400 hover:text-[#6dddff] py-3 px-2 rounded-lg hover:bg-surface-container transition-colors" href="#about">About</a>
+    <a class="text-gray-400 hover:text-[#6dddff] py-3 px-2 rounded-lg hover:bg-surface-container transition-colors" href="#contact">Connect</a>
+  </div>
+</nav>
+<main class="pt-20 md:pt-24">
+
 <!-- Hero Section -->
 <section class="relative min-h-[795px] flex items-center justify-center overflow-hidden px-6">
 <div class="absolute inset-0 z-0">
@@ -419,6 +432,15 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
 <div class="text-gray-500 text-xs font-body uppercase tracking-[0.05em]">
         © 2024 AM Tech Digital Identity. All rights reserved.
       </div>
-</div>
-</footer>
-</body></html>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('burger-toggle').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('opacity-100');
+      menu.classList.toggle('invisible');
+      menu.classList.toggle('scale-100');
+    });
+  </script>
+</body>
