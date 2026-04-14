@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AM Tech | Custom Website Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "surface-bright": "#252d35",
+                  "surface-dim": "#0a0f14",
+                  "on-error": "#490006",
+                  "surface-container-highest": "#1f262e",
+                  "inverse-primary": "#00687e",
+                  "primary": "#6dddff",
+                  "secondary-fixed-dim": "#d6b6ff",
+                  "on-secondary-container": "#ebd8ff",
+                  "on-secondary-fixed": "#4a0090",
+                  "inverse-surface": "#f7f9ff",
+                  "surface": "#0a0f14",
+                  "on-secondary-fixed-variant": "#6f08d0",
+                  "secondary-fixed": "#e1c7ff",
+                  "primary-container": "#00d2fd",
+                  "primary-fixed-dim": "#00c3eb",
+                  "outline-variant": "#43484e",
+                  "error-dim": "#d7383b",
+                  "on-primary-fixed-variant": "#004c5d",
+                  "secondary-dim": "#9547f7",
+                  "on-surface-variant": "#a7abb2",
+                  "tertiary-fixed": "#26fedc",
+                  "tertiary": "#b6ffed",
+                  "primary-dim": "#00c3eb",
+                  "on-tertiary-fixed": "#00483d",
+                  "on-primary-fixed": "#002c37",
+                  "surface-container-low": "#0e1419",
+                  "tertiary-dim": "#00e8c9",
+                  "surface-container": "#141a20",
+                  "outline": "#71767c",
+                  "on-surface": "#eaeef5",
+                  "background": "#0a0f14",
+                  "secondary": "#b884ff",
+                  "surface-container-lowest": "#000000",
+                  "on-error-container": "#ffa8a3",
+                  "surface-variant": "#1f262e",
+                  "tertiary-fixed-dim": "#00efce",
+                  "surface-container-high": "#1a2027",
+                  "error-container": "#9f0519",
+                  "error": "#ff716c",
+                  "surface-tint": "#6dddff",
+                  "on-tertiary-fixed-variant": "#006859",
+                  "on-secondary": "#2f0060",
+                  "tertiary-container": "#26fedc",
+                  "secondary-container": "#6e06d0",
+                  "inverse-on-surface": "#51555c",
+                  "on-primary": "#004c5e",
+                  "primary-fixed": "#00d2fd",
+                  "on-primary-container": "#004352",
+                  "on-tertiary": "#006657",
+                  "on-background": "#eaeef5",
+                  "on-tertiary-container": "#005d4f"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Manrope"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(31, 38, 46, 0.6);
+      backdrop-filter: blur(20px);
+    }
+    .text-glow {
+      text-shadow: 0 0 12px rgba(109, 221, 255, 0.3);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary-fixed">
+<!-- Shared TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0a0f14]/80 backdrop-blur-xl shadow-[0_0_12px_rgba(109,221,255,0.1)]">
+<div class="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#6dddff] scale-95 active:duration-150 cursor-pointer" data-icon="menu">menu</span>
+<h1 class="text-2xl font-black text-white tracking-tighter font-headline">AM Tech</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-headline font-bold tracking-tight">
+<a class="text-[#6dddff] border-b-2 border-[#6dddff] pb-1 hover:text-[#6dddff] transition-colors duration-300" href="#">Home</a>
+<a class="text-gray-400 hover:text-[#6dddff] transition-colors duration-300" href="#work">Work</a>
+<a class="text-gray-400 hover:text-[#6dddff] transition-colors duration-300" href="#about">About</a>
+<a class="text-gray-400 hover:text-[#6dddff] transition-colors duration-300" href="#contact">Connect</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#6dddff] scale-95 active:duration-150 cursor-pointer" data-icon="search">search</span>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[795px] flex items-center justify-center overflow-hidden px-6">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[150px]"></div>
+<div class="absolute inset-0 opacity-20" data-alt="abstract tech background with a fine grid of cyan dots on a dark deep navy field" style="background-image: radial-gradient(#6dddff 0.5px, transparent 0.5px); background-size: 32px 32px;"></div>
+</div>
+<div class="relative z-10 max-w-5xl text-center">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-highest border border-outline-variant/20 mb-8">
+<span class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_#26fedc]"></span>
+<span class="text-xs font-label uppercase tracking-[0.05em] text-on-surface-variant">Available for new projects</span>
+</div>
+<h2 class="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold tracking-tighter text-on-surface mb-8 leading-[1.1]">
+          We Build Websites That <span class="text-primary italic">Grow</span> Your Business
+        </h2>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed">
+          Custom, modern, and high-performance websites designed just for you. We transform digital presence into market leadership.
+        </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="px-10 py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed font-headline font-bold rounded-full transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(109,221,255,0.3)]">
+            Get Your Website
+          </button>
+<button onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})" class="px-10 py-5 bg-surface-bright text-primary font-headline font-bold rounded-full transition-all hover:bg-surface-container-highest">
+            View Our Work
+          </button>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 px-6 bg-surface-container-low" id="about">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<div class="relative aspect-square rounded-[2rem] overflow-hidden group">
+<img alt="" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 transition-all duration-700" data-alt="minimalist modern office space with high tech equipment and large windows at dusk showing city lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg4nw28KC7t5REbhUiCNUKkwsnI6KCvJTbZM0gssoeJaZjVr1XRBOFrye8NCcoTtNDrQC7kmny9hd-vgnKDih-aGx8GLfIrTc5VdpYVPZ-Xc7z0tDI8zPz4mT1JfWyrY4nAXgrX3cBwh4O-GJFVzn0XmOTRsIIps5ur6XSC4nOnA4gAvXrc5e8iZYcuO9zV-_lp1xrX8Tg5kJbb9oyd1dVJuvjG-MShgvGTNWKv8fggV3HtJZNdliNoYdXsU1ABX2j1nudvuHVUxBB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 p-6 glass-card rounded-2xl border border-white/5 max-w-[280px]">
+<p class="text-primary font-headline font-bold text-3xl mb-1">100%</p>
+<p class="text-on-surface-variant text-sm font-label uppercase tracking-widest">Custom Architecture</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<label class="text-secondary font-label uppercase tracking-[0.2em] mb-4 block">About AM Tech</label>
+<h3 class="text-4xl md:text-5xl font-headline font-bold text-on-surface mb-8 leading-tight">Crafting Identity in the Digital Void.</h3>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-6">
+            AM Tech isn't just an agency; we're digital architects. We specialize in high-quality custom websites that don't just look stunning—they function with surgical precision.
+          </p>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+            Our flexibility is our strength. Whether it's a complex enterprise platform or a boutique editorial site, we have the mastery to build any design you can imagine, with performance baked into every line of code.
+          </p>
+<div class="flex gap-4">
+<div class="w-12 h-[2px] bg-primary mt-3"></div>
+<p class="italic text-on-surface font-medium">"Innovation is not just about tools; it's about the vision behind the execution."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h3 class="text-4xl md:text-5xl font-headline font-bold text-on-surface mb-4">Precision Services</h3>
+<p class="text-on-surface-variant max-w-xl mx-auto">Scalable solutions tailored to the unique demands of your digital evolution.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service 1 -->
+<div class="p-8 rounded-[2rem] bg-surface-container-high hover:bg-surface-container-highest transition-colors group">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="web">web</span>
+</div>
+<h4 class="text-xl font-headline font-bold text-on-surface mb-4">Website Design</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Visual storytelling meets strategic layout. We create interfaces that captivate and convert.</p>
+</div>
+<!-- Service 2 -->
+<div class="p-8 rounded-[2rem] bg-surface-container-high hover:bg-surface-container-highest transition-colors group">
+<div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="code">code</span>
+</div>
+<h4 class="text-xl font-headline font-bold text-on-surface mb-4">Website Development</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Clean, efficient code powering responsive, lightning-fast digital experiences.</p>
+</div>
+<!-- Service 3 -->
+<div class="p-8 rounded-[2rem] bg-surface-container-high hover:bg-surface-container-highest transition-colors group">
+<div class="w-14 h-14 rounded-2xl bg-tertiary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="brush">brush</span>
+</div>
+<h4 class="text-xl font-headline font-bold text-on-surface mb-4">UI/UX Design</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Intuitive user journeys crafted through rigorous research and aesthetic precision.</p>
+</div>
+<!-- Service 4 -->
+<div class="p-8 rounded-[2rem] bg-surface-container-high hover:bg-surface-container-highest transition-colors group">
+<div class="w-14 h-14 rounded-2xl bg-primary-container/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-3xl" data-icon="refresh">refresh</span>
+</div>
+<h4 class="text-xl font-headline font-bold text-on-surface mb-4">Website Redesign</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Breathing new life into aging platforms with modern tech stacks and fresh visuals.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="py-32 px-6 bg-surface-container-low" id="work">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+<div>
+<label class="text-primary font-label uppercase tracking-[0.2em] mb-4 block">Portfolio</label>
+<h3 class="text-4xl md:text-5xl font-headline font-bold text-on-surface leading-tight">Selected Work</h3>
+</div>
+<p class="text-on-surface-variant max-w-sm">One of our latest projects showcasing our commitment to high-performance design.</p>
+</div>
+<div class="group relative overflow-hidden rounded-[2.5rem] bg-surface-container">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+<div class="p-12 lg:p-20 flex flex-col justify-center order-2 lg:order-1">
+<span class="text-secondary font-label uppercase tracking-widest text-xs mb-4">E-Commerce Architecture</span>
+<h4 class="text-4xl md:text-6xl font-headline font-extrabold text-on-surface mb-6 tracking-tighter">RS Burger</h4>
+<p class="text-lg text-on-surface-variant mb-10 leading-relaxed">
+                A high-fidelity digital menu and ordering platform built for a premium burger franchise. Focus on mouth-watering visuals and zero-friction checkout.
+              </p>
+<div class="flex items-center gap-6">
+<a href="https://homepage-two-theta-89.vercel.app/index.html" target="_blank" class="px-8 py-4 rounded-full bg-surface-bright text-on-surface font-headline font-bold flex items-center gap-2 group-hover:text-primary transition-colors">
+                  View Case Study
+                  <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative min-h-[400px] lg:min-h-[600px] order-1 lg:order-2 overflow-hidden">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="high-end gourmet burger photography with professional studio lighting on a dark minimalist background for a restaurant website" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOHTtrCEq6_L7FzDWakhutX-KBUbDFDazkO-FkoXcvIPvidxnQ_H0EcBSDSdmTHdCVHeeoGB2-xI-gAfQh5bd_lkySgp1tFkkmL9amxDD2-_wm8H9kssLEeLa9oIuIdwb80Q-kldBNhoAavukpTtCh7aYSihTnY4pXlk98VxW4D0jylYMVBn6LaZw3VF4qbymdpRaTOcVdBF91vO4OaLUM2wwypZrWSRPAxSbxM6o4_SjZa99OJTGRUIf9_H_DCP9OmXvRZM8arUlm"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="p-8 rounded-3xl bg-surface-container-low border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4 block" data-icon="speed">speed</span>
+<h5 class="text-xl font-headline font-bold text-on-surface mb-2">Fast delivery</h5>
+<p class="text-sm text-on-surface-variant">Rapid deployment without compromising architectural integrity.</p>
+</div>
+<div class="p-8 rounded-3xl bg-surface-container-low border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary mb-4 block" data-icon="auto_awesome">auto_awesome</span>
+<h5 class="text-xl font-headline font-bold text-on-surface mb-2">Modern design</h5>
+<p class="text-sm text-on-surface-variant">Editorial-grade aesthetics meeting cutting-edge UX patterns.</p>
+</div>
+<div class="p-8 rounded-3xl bg-surface-container-low border border-outline-variant/10">
+<span class="material-symbols-outlined text-tertiary mb-4 block" data-icon="tune">tune</span>
+<h5 class="text-xl font-headline font-bold text-on-surface mb-2">Customizable</h5>
+<p class="text-sm text-on-surface-variant">Every component modularly crafted to fit your unique needs.</p>
+</div>
+<div class="p-8 rounded-3xl bg-surface-container-low border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container mb-4 block" data-icon="payments">payments</span>
+<h5 class="text-xl font-headline font-bold text-on-surface mb-2">Affordable</h5>
+<p class="text-sm text-on-surface-variant">Premium results at competitive, transparent price points.</p>
+</div>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="text-4xl md:text-5xl font-headline font-bold text-on-surface mb-8 leading-tight">Why the world's best tech teams choose AM Tech.</h3>
+<p class="text-lg text-on-surface-variant mb-8">We treat every project as a flagship. We don't just build websites; we build partnerships that endure beyond the initial launch.</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-4 text-on-surface">
+<span class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px] text-primary" data-icon="check" data-weight="fill">check</span>
+</span>
+                Industry-leading SEO optimization
+              </li>
+<li class="flex items-center gap-4 text-on-surface">
+<span class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px] text-primary" data-icon="check" data-weight="fill">check</span>
+</span>
+                Mobile-first responsive architecture
+              </li>
+<li class="flex items-center gap-4 text-on-surface">
+<span class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px] text-primary" data-icon="check" data-weight="fill">check</span>
+</span>
+                24/7 Priority technical support
+              </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="relative rounded-[3rem] p-12 md:p-24 overflow-hidden text-center bg-surface-container-highest">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/20 blur-[120px] rounded-full -translate-x-1/2 translate-y-1/2"></div>
+</div>
+<div class="relative z-10">
+<h3 class="text-3xl md:text-5xl font-headline font-bold text-on-surface mb-8">Tell us your idea — we’ll build it exactly how you want</h3>
+<a class="inline-block px-12 py-6 bg-primary text-on-primary-fixed font-headline font-extrabold rounded-full hover:bg-primary-container transition-all shadow-xl hover:scale-105 active:scale-95" href="#contact">
+              Contact Us
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 px-6" id="contact">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-16">
+<h3 class="text-4xl font-headline font-bold text-on-surface mb-4">Start Your Project</h3>
+<p class="text-on-surface-variant">Send us a message and we'll get back to you within 24 hours.</p>
+</div>
+<form id="contactForm" class="space-y-8">
+<div id="formMessage" class="hidden p-4 rounded-xl text-center font-headline font-bold"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-on-surface-variant ml-1">Your Name</label>
+<input id="name" class="w-full bg-surface-container-highest border-none rounded-xl py-4 px-6 text-on-surface focus:ring-2 focus:ring-primary/40 transition-all placeholder:text-outline/40" placeholder="John Doe" type="text" required/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-on-surface-variant ml-1">Email Address</label>
+<input id="email" class="w-full bg-surface-container-highest border-none rounded-xl py-4 px-6 text-on-surface focus:ring-2 focus:ring-primary/40 transition-all placeholder:text-outline/40" placeholder="john@example.com" type="email" required/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-on-surface-variant ml-1">Project Details</label>
+<textarea id="message" class="w-full bg-surface-container-highest border-none rounded-2xl py-4 px-6 text-on-surface focus:ring-2 focus:ring-primary/40 transition-all placeholder:text-outline/40 resize-none" placeholder="Describe your vision..." rows="6" required></textarea>
+</div>
+<button id="submitBtn" class="w-full py-6 bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed font-headline font-bold rounded-2xl transition-all hover:shadow-[0_0_20px_rgba(109,221,255,0.2)]" type="submit">
+            Send Inquiry
+          </button>
+</form>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const submitBtn = document.getElementById('submitBtn');
+  const formMessage = document.getElementById('formMessage');
+  const originalText = submitBtn.textContent;
+  
+  submitBtn.textContent = 'Sending...';
+  submitBtn.disabled = true;
+
+  try {
+    const response = await fetch('http://localhost:5000/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+      })
+    });
+
+    formMessage.classList.remove('hidden');
+    
+    if (response.ok) {
+      const data = await response.json();
+      formMessage.classList.remove('bg-error/20', 'text-error', 'border-error/40');
+      formMessage.classList.add('bg-tertiary/20', 'text-tertiary', 'border', 'border-tertiary/40');
+      formMessage.textContent = '✓ Message sent successfully! We\'ll contact you within 24 hours.';
+      document.getElementById('contactForm').reset();
+      setTimeout(() => formMessage.classList.add('hidden'), 5000);
+    } else {
+      try {
+        const data = await response.json();
+        formMessage.classList.remove('bg-tertiary/20', 'text-tertiary', 'border-tertiary/40');
+        formMessage.classList.add('bg-error/20', 'text-error', 'border', 'border-error/40');
+        formMessage.textContent = data.error || 'Failed to send message. Please try again.';
+      } catch {
+        formMessage.classList.remove('bg-tertiary/20', 'text-tertiary', 'border-tertiary/40');
+        formMessage.classList.add('bg-error/20', 'text-error', 'border', 'border-error/40');
+        formMessage.textContent = 'Server error. Make sure the Python backend is running on http://localhost:5000';
+      }
+    }
+  } catch (error) {
+    formMessage.classList.remove('hidden', 'bg-tertiary/20', 'text-tertiary', 'border-tertiary/40');
+    formMessage.classList.add('bg-error/20', 'text-error', 'border', 'border-error/40');
+    formMessage.textContent = '⚠ Backend not running! Please run: python app.py in the project folder';
+    console.error('Form error:', error);
+  } finally {
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+  }
+});
+</script>
+</div>
+</section>
+</main>
+<!-- Shared Footer -->
+<footer class="bg-[#0a0f14] w-full py-12 px-8 border-t border-[#1a2027]/15">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 w-full">
+<div class="text-xl font-bold text-white font-headline">AM Tech</div>
+<nav class="flex gap-8 text-sm uppercase tracking-[0.05em] font-body text-gray-500">
+<a class="hover:text-[#b884ff] transition-all" href="#">Services</a>
+<a class="hover:text-[#b884ff] transition-all" href="#">Portfolio</a>
+<a class="hover:text-[#b884ff] transition-all" href="#">Insights</a>
+<a class="hover:text-[#b884ff] transition-all text-[#6dddff] font-bold" href="#">Contact</a>
+</nav>
+<div class="text-gray-500 text-xs font-body uppercase tracking-[0.05em]">
+        © 2024 AM Tech Digital Identity. All rights reserved.
+      </div>
+</div>
+</footer>
+<!-- Mobile Navigation Shell (Drawer UI) -->
+<div class="fixed inset-y-0 left-0 z-[60] flex flex-col p-6 h-full w-80 rounded-r-3xl bg-[#0a0f14]/95 backdrop-blur-2xl shadow-2xl shadow-black/50 -translate-x-full lg:hidden transition-transform duration-300 ease-out">
+<div class="flex justify-between items-center mb-12">
+<span class="text-2xl font-black text-[#6dddff] font-headline">AM Tech Menu</span>
+<span class="material-symbols-outlined text-white cursor-pointer" data-icon="close">close</span>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="bg-gradient-to-r from-[#6dddff] to-[#00d2fd] text-[#0a0f14] rounded-full px-6 py-3 font-headline text-lg font-semibold flex items-center gap-4" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+        Home
+      </a>
+<a class="text-gray-300 px-6 py-3 hover:bg-[#1f262e] rounded-full font-headline text-lg font-semibold flex items-center gap-4 transition-all" href="#work">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+        Work
+      </a>
+<a class="text-gray-300 px-6 py-3 hover:bg-[#1f262e] rounded-full font-headline text-lg font-semibold flex items-center gap-4 transition-all" href="#about">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+        About
+      </a>
+<a class="text-gray-300 px-6 py-3 hover:bg-[#1f262e] rounded-full font-headline text-lg font-semibold flex items-center gap-4 transition-all" href="#contact">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+        Connect
+      </a>
+</nav>
+</div>
+</body></html>
