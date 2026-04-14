@@ -112,9 +112,6 @@
 <a class="text-gray-400 hover:text-[#6dddff] transition-colors duration-300" href="#about">About</a>
 <a class="text-gray-400 hover:text-[#6dddff] transition-colors duration-300" href="#contact">Connect</a>
 </nav>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-[#6dddff] scale-95 active:duration-150 cursor-pointer" data-icon="search">search</span>
-</div>
 </div>
 </header>
 <main class="pt-20">
@@ -359,7 +356,7 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
   submitBtn.disabled = true;
 
   try {
-    const response = await fetch('http://localhost:5000/api/contact', {
+    const response = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
