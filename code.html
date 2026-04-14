@@ -102,17 +102,22 @@
 <body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary-fixed">
 <!-- Shared TopAppBar -->
 <header class="fixed top-0 w-full z-50 bg-[#0a0f14]/80 backdrop-blur-xl shadow-[0_0_12px_rgba(109,221,255,0.1)]">
-<div class="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto">
-<div class="flex items-center gap-4">
-<h1 class="text-2xl font-black text-white tracking-tighter font-headline">AM Tech</h1>
-</div>
-<nav class="hidden md:flex items-center gap-8 font-headline font-bold tracking-tight">
-<a class="text-[#6dddff] border-b-2 border-[#6dddff] pb-1 hover:text-[#6dddff] transition-colors duration-300" href="#">Home</a>
-<a class="text-gray-400 hover:text-[#6dddff] transition-colors duration-300" href="#work">Work</a>
-<a class="text-gray-400 hover:text-[#6dddff] transition-colors duration-300" href="#about">About</a>
-<a class="text-gray-400 hover:text-[#6dddff] transition-colors duration-300" href="#contact">Connect</a>
-</nav>
-</div>
+  <div class="flex flex-col items-center px-6 py-4 max-w-screen-2xl mx-auto">
+
+    <!-- Logo -->
+    <h1 class="text-2xl font-black text-white tracking-tighter font-headline mb-3">
+      AM Tech
+    </h1>
+
+    <!-- Mobile ONLY Navbar -->
+    <nav class="flex md:hidden gap-6 text-sm font-headline font-bold tracking-tight">
+      <a class="text-[#6dddff]" href="#">Home</a>
+      <a class="text-gray-400 hover:text-[#6dddff]" href="#work">Work</a>
+      <a class="text-gray-400 hover:text-[#6dddff]" href="#about">About</a>
+      <a class="text-gray-400 hover:text-[#6dddff]" href="#contact">Connect</a>
+    </nav>
+
+  </div>
 </header>
 <main class="pt-20">
 <!-- Hero Section -->
