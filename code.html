@@ -122,13 +122,18 @@
   </div>
 </header>
 
-<!-- Mobile Dropdown Menu -->
-<nav id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-[#0a0f14]/95 backdrop-blur-xl z-40 shadow-[0_10px_30px_rgba(0,0,0,0.5)] opacity-0 invisible scale-95 transition-all duration-200 origin-top">
-  <div class="px-6 py-6 flex flex-col gap-2">
-    <a class="text-[#6dddff] py-3 px-2 rounded-lg hover:bg-surface-container" href="#">Home</a>
-    <a class="text-gray-400 hover:text-[#6dddff] py-3 px-2 rounded-lg hover:bg-surface-container transition-colors" href="#work">Work</a>
-    <a class="text-gray-400 hover:text-[#6dddff] py-3 px-2 rounded-lg hover:bg-surface-container transition-colors" href="#about">About</a>
-    <a class="text-gray-400 hover:text-[#6dddff] py-3 px-2 rounded-lg hover:bg-surface-container transition-colors" href="#contact">Connect</a>
+<!-- Mobile Overlay Menu -->
+<nav id="mobile-menu" class="fixed inset-0 z-[60] md:hidden bg-[#0a0f14]/98 backdrop-blur-xl transform -translate-y-full transition-transform duration-300 ease-in-out">
+  <div class="flex-1 flex flex-col pt-20 px-6">
+    <button id="menu-close" class="self-end p-4 text-gray-400 hover:text-white mb-8">
+      <span class="material-symbols-outlined text-2xl">close</span>
+    </button>
+    <div class="flex-1 flex flex-col justify-center space-y-4">
+      <a class="text-2xl text-[#6dddff] font-bold py-3" href="#">Home</a>
+      <a class="text-xl text-gray-400 hover:text-[#6dddff] py-3 transition-colors" href="#work">Work</a>
+      <a class="text-xl text-gray-400 hover:text-[#6dddff] py-3 transition-colors" href="#about">About</a>
+      <a class="text-xl text-gray-400 hover:text-[#6dddff] py-3 transition-colors" href="#contact">Connect</a>
+    </div>
   </div>
 </nav>
 <main class="pt-20 md:pt-24">
@@ -436,11 +441,24 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
   </footer>
 
   <script>
-    document.getElementById('burger-toggle').addEventListener('click', function() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('opacity-100');
-      menu.classList.toggle('invisible');
-      menu.classList.toggle('scale-100');
+    // Mobile menu toggle
+    const burgerToggle = document.getElementById('burger-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    burgerToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('-translate-y-full');
+    });
+
+    menuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('-translate-y-full');
+    });
+
+    // Close on nav links
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('-translate-y-full');
+      });
     });
   </script>
 </body>
